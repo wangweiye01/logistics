@@ -1,4 +1,4 @@
-package com.didispace.filter;
+package com.yatai.filter;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
