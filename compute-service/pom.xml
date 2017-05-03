@@ -21,9 +21,22 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
+		<version.feilong-platform>1.10.2</version.feilong-platform>
 	</properties>
+	
+	<repositories>
+	    <repository>
+	        <id>feilong-repository</id>
+	        <url>https://raw.github.com/venusdrogon/feilong-platform/repository</url>
+	    </repository>
+	</repositories>
 
 	<dependencies>
+		<dependency>
+            <groupId>com.feilong.platform</groupId>
+            <artifactId>feilong-core</artifactId>
+            <version>${version.feilong-platform}</version>
+        </dependency>
 		<dependency>
     		<groupId>org.springframework.boot</groupId>
     		<artifactId>spring-boot-starter-actuator</artifactId>
