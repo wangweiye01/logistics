@@ -15,7 +15,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.3.5.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
 	<properties>
@@ -23,29 +23,49 @@
 		<java.version>1.8</java.version>
 		<version.feilong-platform>1.10.2</version.feilong-platform>
 	</properties>
-	
+
 	<repositories>
-	    <repository>
-	        <id>feilong-repository</id>
-	        <url>https://raw.github.com/venusdrogon/feilong-platform/repository</url>
-	    </repository>
+		<repository>
+			<id>feilong-repository</id>
+			<url>https://raw.github.com/venusdrogon/feilong-platform/repository</url>
+		</repository>
 	</repositories>
 
 	<dependencies>
+		<!-- feilong依赖-开始 -->
 		<dependency>
-		    <groupId>org.apache.commons</groupId>
-		    <artifactId>commons-lang3</artifactId>
-		    <version>3.4</version>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.5</version>
 		</dependency>
-		
 		<dependency>
-            <groupId>com.feilong.platform</groupId>
-            <artifactId>feilong-core</artifactId>
-            <version>${version.feilong-platform}</version>
-        </dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+			<version>4.1</version>
+		</dependency>
+
 		<dependency>
-    		<groupId>org.springframework.boot</groupId>
-    		<artifactId>spring-boot-starter-actuator</artifactId>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.9.3</version><!--$NO-MVN-MAN-VER$-->
+		</dependency>
+
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+			<classifier>jdk15</classifier>
+		</dependency>
+		<!-- feilong依赖-结束 -->
+
+		<dependency>
+			<groupId>com.feilong.platform</groupId>
+			<artifactId>feilong-core</artifactId>
+			<version>${version.feilong-platform}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.retry</groupId>
@@ -73,10 +93,10 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>  
-		    <groupId>org.springframework.boot</groupId>  
-		    <artifactId>spring-boot-devtools</artifactId>  
-		    <optional>true</optional><!-- optional=true,依赖不会传递，该项目依赖devtools；之后依赖myboot项目的项目如果想要使用devtools，需要重新引入 -->  
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional><!-- optional=true,依赖不会传递，该项目依赖devtools；之后依赖myboot项目的项目如果想要使用devtools，需要重新引入 -->
 		</dependency>
 
 	</dependencies>
