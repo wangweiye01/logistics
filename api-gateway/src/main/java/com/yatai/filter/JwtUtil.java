@@ -62,9 +62,11 @@ public class JwtUtil {
 	
 	public static void main(String[] args) throws Exception {
 		String subject = JwtUtil.generalSubject();
-		String s = JwtUtil.createJWT("11", subject, 2000 * 90L);
+		String s = JwtUtil.createJWT("11", subject, 2000 * 900L);
 		System.out.println(s);
 		
 		System.out.println(JwtUtil.parseJWT(s));
+		
+		System.out.println("Bearer wangweiye".substring(7));
 	}
 }

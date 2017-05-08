@@ -33,7 +33,9 @@ public class AccessFilter extends ZuulFilter {
 
 		log.info(String.format("%s request to %s", request.getMethod(), request.getRequestURL().toString()));
 
-		String accessToken = request.getParameter("accessToken");
+		String accessToken = request.getHeader("Authorization");
+		accessToken = accessToken.substring(7);
+		
 		if (accessToken == null) {
 			log.warn("access token is empty");
 			ctx.setSendZuulResponse(false);
@@ -46,9 +48,9 @@ public class AccessFilter extends ZuulFilter {
 				log.warn("access token is error");
 				ctx.setSendZuulResponse(false);
 				ctx.setResponseStatusCode(401);
+				return null;
 			}
 		}
-		log.info("access token ok");
 		return "OK";
 	}
 
